@@ -28,11 +28,17 @@ require_once("config.php");
 
 
 //Insert de novo usuario
-$newuser = new Usuario("Aluno7", "4lun07");
 
-$newuser->insert();
+// $newuser = new Usuario("Aluno7", "4lun07");
+// $newuser->insert();
+// echo $newuser;
 
-echo $newuser;
+//Atualizando um usuario
+
+$usuario = new Usuario();
+$usuario->loadById(7);
+$usuario->update("AlunoUpdate","asdasd");
+echo $usuario;
 
 ?>
 
